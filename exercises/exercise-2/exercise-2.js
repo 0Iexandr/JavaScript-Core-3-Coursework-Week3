@@ -70,3 +70,24 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function findGryffindorHouseMembers([...rest]) {
+  const membersObj = {...rest};
+  for (key in membersObj) {
+    if(membersObj[key].house === "Gryffindor") {
+      console.log(membersObj[key].firstName, membersObj[key].lastName);
+    };
+  };
+};
+
+function findTeachersWithPets([...rest]) {
+  const membersObj = {...rest};
+  for (key in membersObj) {
+    if(membersObj[key].occupation === "Teacher" && membersObj[key].pet) {
+      console.log(membersObj[key].firstName, membersObj[key].lastName);
+    };
+  };
+};
+
+findGryffindorHouseMembers(hogwarts);
+findTeachersWithPets(hogwarts);

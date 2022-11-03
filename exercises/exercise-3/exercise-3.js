@@ -6,3 +6,17 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function printingReceipt([...rest]) {
+  const itemsObj = {...rest};
+  let totalOrderPrice = 0;
+  
+  for(key in itemsObj) {
+    let totalItemPrice = itemsObj[key].unitPrice * itemsObj[key].quantity;
+    totalOrderPrice += itemsObj[key].unitPrice * itemsObj[key].quantity;
+    console.log(itemsObj[key].quantity, itemsObj[key].itemName, totalItemPrice);
+  };
+  console.log(totalOrderPrice);
+};
+
+printingReceipt(order);

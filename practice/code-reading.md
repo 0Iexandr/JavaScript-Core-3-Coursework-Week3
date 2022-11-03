@@ -61,4 +61,4 @@ f2(y);
 console.log(y);
 ```
 
-What will be the output of this code. Explain your answer in 50 words or less.
+What will be the output of this code. Explain your answer in 50 words or less. 
